@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<title>register</title>
+	 <link rel="stylesheet" href="{ % static 'CSS/style4.css'%}">
+</head>
+
+
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="66.png">
+				<ul>
+					<li><a class="active" href="home.html">Home</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="register.html">Sign Up</a></li>
+				</ul>
+<div class="header">
+  <h2>Register</h2>
+</div>
+
+
+<form method="post" action="register.php">
+<script language ="JavaScript">
+function verif() {
+ var obj1=document.getElementById("username");
+
+ var obj2=document.getElementById("email");
+ var obj3=document.getElementById("password");
+ var obj4=document.getElementById("passwordconf");
+
+
+if(obj1.value==""||obj1.value.length < 4){
+alert("Veuillez Taper Votre username  ");
+
+   return false;
+}
+
+
+
+if(obj2.value==""){
+  alert("Veuillez Taper Votre Email");
+   return false;
+}
+ if(obj2.value.indexOf("@") == -1 || obj2.value.length < 6){
+    alert("Votre Email est incorrect");
+    return false;
+  }
+if(obj3.value==""||obj3.value.length < 5){
+  alert("Veuillez Taper Votre Mot De Pass");
+
+   return false;
+}
+
+if(obj3.value!=obj4.value){
+  alert("la confirmation de votre Mot De Pass est incorrect");
+
+   return false;
+}
+
+
+
+
+}
+
+
+</script>
+
+	<div class="input-group">
+		<label>Username</label>
+       <input type ="text" name="username">
+
+</div>
+
+<div class="input-group">
+		<label>Email</label>
+       <input type ="text" name="email">
+
+</div>
+
+<div class="input-group">
+		<label>Password</label>
+       <input type ="password" name="password">
+
+</div>
+
+
+
+<div class="input-group">
+		<label>Confirm Password</label>
+       <input type ="password" name="passwordconf">
+
+</div>
+
+<div class="input-group">
+
+       <button type ="submit" name="register" class="btn" onclick="return verif() ">
+       	Register
+
+       </button>
+
+</div>
+<p>
+
+Already a member? <a href="login.html">Sign in </a>
+</p>
+<p> Back to Home page <a href="home.html">  Home page</a>
+
+</p>
+</form>
+</div>
+</body>
+</html>

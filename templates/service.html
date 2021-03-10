@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Service</title>
+	<link rel="stylesheet" href="{ % static 'CSS/style1.css'%}" >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="66.png" >
+				<ul>
+					<li><a class="active" href="home.html">Home</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="register.html">Sign Up</a></li>
+				</ul>
+			</nav>
+
+<div class="container">
+  <h1 class="text-center  mt-5">
+    Speech to text
+  </h1>
+
+    <div class="form-group">
+      <textarea id="textbox" rows="5" class="form-control">
+</textarea>
+    </div>
+
+    <div class="form-group">
+
+      <button id="start-btn"class="btn btn-danger btn-block">
+
+      Speak
+      </button>
+
+<p id="instructions"> Press The speak Button</p>
+
+
+
+    </div>
+</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+	</body>
+	</html>

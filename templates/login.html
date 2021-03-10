@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	 <link rel="stylesheet" href="{ % static 'CSS/style4.css'%}">
+
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="66.png">
+				<ul>
+					<li><a class="active" href="home.html">Home</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="register.html">Sign Up</a></li>
+				</ul>
+
+<div class="header">
+  <h2>Login</h2>
+</div>
+
+<form method="post" action="login.php">
+	<div class="input-group">
+		<label>Username</label>
+       <input type ="text" name="username">
+
+</div>
+
+<div class="input-group">
+		<label>Password</label>
+       <input type ="password" name="passwordd">
+
+</div>
+
+
+<div class="input-group">
+
+       <button type ="submit" name="login" class="btn">login
+       </button>
+
+</div>
+<p>
+Not yet a member? <a href="register.html">Sign in </a>
+</p>
+
+</form>
+</body>
