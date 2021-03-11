@@ -13,13 +13,12 @@
 			<nav class="navbar">
 				<img class="logo" src="66.png">
 				<ul>
-					<li><a class="active" href="home.html">Home</a></li>
-					<li><a href="service.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="register.html">Sign Up</a></li>
+					<li><a class="active" href="{% url 'webhome'%}">Home</a></li>
+					<li><a href="{% url 'webservice'%}">Services</a></li>
+					<li><a href="{% url 'webabout'%}">About</a></li>
+					<li><a href="{% url 'webcontact'%}">Contact</a></li>
+					<li><a href="{% url 'webregister'%}">Sign Up</a></li>
 				</ul>
-
 <div class="header">
   <h2>Login</h2>
 </div>
@@ -45,7 +44,7 @@
 
 </div>
 <p>
-Not yet a member? <a href="register.html">Sign in </a>
+Not yet a member? <a href="{% url 'webregister'%}">Sign in </a>
 </p>
 
 </form>
