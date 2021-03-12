@@ -5,6 +5,6 @@ from django.template import loader
 
 def home(request):
     context = {
-        title :"HOME"
+        "title" :"HOME"
     }
-    return render(request, 'home.html' ,home)
+    return render(request, 'home.html' ,context)
