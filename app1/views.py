@@ -4,4 +4,7 @@ from django.template import loader
 
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        title :"HOME"
+    }
+    return render(request, 'home.html' ,home)

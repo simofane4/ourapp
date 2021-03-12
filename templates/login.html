@@ -1,24 +1,11 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>register</title>
-	 <link rel="stylesheet" href="{ % static 'CSS/style4.css'%}">
+	{% block style %}
+		 <link rel="stylesheet" href="{ % static 'CSS/style4.css'%}">
 
-</head>
-<body>
-	<div class="wrapper">
-			<nav class="navbar">
-				<img class="logo" src="66.png">
-				<ul>
-					<li><a class="active" href="{% url 'webhome'%}">Home</a></li>
-					<li><a href="{% url 'webservice'%}">Services</a></li>
-					<li><a href="{% url 'webabout'%}">About</a></li>
-					<li><a href="{% url 'webcontact'%}">Contact</a></li>
-					<li><a href="{% url 'webregister'%}">Sign Up</a></li>
-				</ul>
+	{% endblock style %}
+{% block content %}
 <div class="header">
   <h2>Login</h2>
 </div>
@@ -46,6 +33,8 @@
 <p>
 Not yet a member? <a href="{% url 'webregister'%}">Sign in </a>
 </p>
+{% endblock content %}
+
 
 </form>
 </body>

@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	{% load static %}
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<link rel="stylesheet" href="{% static 'CSS/style.css'%}">
-</head>
-<body>
-	<div class="wrapper">
-			<nav class="navbar">
-				<img class="logo" src="{% static 'image/66.png'%}">
-				<ul>
-					<li><a class="active" href="{% url 'webhome'%}">Home</a></li>
-					<li><a href="{% url 'webservice'%}">Services</a></li>
-					<li><a href="{% url 'webabout'%}">About</a></li>
-					<li><a href="{% url 'webcontact'%}">Contact</a></li>
-					<li><a href="{% url 'webregister'%}">Sign Up</a></li>
-				</ul>
-			</nav>
-			<div class="center">
-			<h5>Welcome To Build with Us </h5>
-			<h6>Create Something New</h6>
-			<div class="buttons">
-			<button ><a href="{% url 'webabout' %}"> Explore More </a></button>
-			<button class="btn2"><a href="{% url 'webregister' %}">Subscribe Us </a></button>
-		</div>
-		</div>
+{% extends "base.html" %}
+{% load static %}
 
+{% block content %}
 
-
-        <div class="app-picture">
-		<img src="{% static 'image/5.png'%}" >
-
+<div class="center">
+	<h5>Welcome To Build with Us </h5>
+	<h6>Create Something New</h6>
+	<div class="buttons">
+		<button ><a href="{% url 'webabout' %}"> Explore More </a></button>
+		<button class="btn2"><a href="{% url 'webregister' %}">Subscribe Us </a></button>
 	</div>
-	</div>
-	</div>
-</body>
-</html>
+</div>
+
+
+
+<div class="app-picture">
+	<img src="{% static 'image/5.png'%}" >
+
+</div>
+{% endblock content %}

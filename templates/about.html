@@ -1,41 +1,32 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <link rel="stylesheet" href="{ % static 'CSS/style2.css'%}">
-</head>
-<body>
-  <div class="wrapper">
-      <nav class="navbar">
-        <img class="logo" src="66.png">
-        <ul>
-          <li><a class="active" href="home.html">Home</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="register.html">Sign Up</a></li>
-        </ul>
-      </nav>
 
- <div class="team">
-    <div class="team_member">
-      <div class="team_img">
-        <img src="6.png" alt="Team_image">
+{% block style %}
+ <link rel="stylesheet" href="{ % static 'CSS/style2.css'%}">
+{% endblock style %}
+
+ 
+{% block content  %}
+
+  <div class="team">
+      <div class="team_member">
+        <div class="team_img">
+          <img src="6.png" alt="Team_image">
+        </div>
+        <h3>What we do For You </h3>
+
+        <p>generate code.........................</p>
       </div>
-      <h3>What we do For You </h3>
+      <div class="team_member">
+        <div class="team_img">
+          <img src="12.png" alt="Team_image">
+        </div>
+        <h3>What you need to do</h3>
 
-      <p>generate code.........................</p>
+        <p>just speak ..............................</p></div>
+
     </div>
-    <div class="team_member">
-      <div class="team_img">
-        <img src="12.png" alt="Team_image">
-      </div>
-      <h3>What you need to do</h3>
+{% endblock content  %}
 
-      <p>just speak ..............................</p></div>
-
-</div>
 </body>
 </html>

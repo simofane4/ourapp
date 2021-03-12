@@ -1,26 +1,15 @@
+{% extends "base.html" %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Service</title>
-	<link rel="stylesheet" href="{ % static 'CSS/style1.css'%}" >
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-</head>
-<body>
-	<div class="wrapper">
-			<nav class="navbar">
-				<img class="logo" src="66.png" >
-				<ul>
-					<li><a class="active" href="home.html">Home</a></li>
-					<li><a href="service.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="register.html">Sign Up</a></li>
-				</ul>
-			</nav>
+	
+	
+{% block style  %}
+<link rel="stylesheet" href="{ % static 'CSS/style1.css'%}" >
+{% endblock style %}
+{% block content %}
+
 
 <div class="container">
   <h1 class="text-center  mt-5">
@@ -46,10 +35,14 @@
     </div>
 </div>
 
+{% endblock content %}
+
+{% block js %}
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 
 
+{% endblock js %}
 
 	</body>
 	</html>

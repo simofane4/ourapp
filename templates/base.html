@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Home</title> 
+	<link rel="stylesheet" href="{% static 'CSS/style.css'%}">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	{% block style %}
+  
+  	{% endblock style %}
+	 
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="{% static 'image/66.png'%}">
+				<ul>
+					<li><a class="active" href="{% url 'webhome'%}">Home</a></li>
+					<li><a href="{% url 'webservice'%}">Services</a></li>
+					<li><a href="{% url 'webabout'%}">About</a></li>
+					<li><a href="{% url 'webcontact'%}">Contact</a></li>
+					<li><a href="{% url 'webregister'%}">Sign Up</a></li>
+				</ul>
+			</nav>
+
+
+	{% block content %}
+	
+	{% endblock content %}
+	
+
+
+
+      
+	</div>
+	
+
+	{% block js %}
+	
+	{% endblock js %}
+</body>
+</html>
